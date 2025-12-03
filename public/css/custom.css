@@ -124,4 +124,13 @@ html {
   width: 300px;
   height: auto;
   vertical-align: middle;
+}
+
+.form-group {
+  padding-bottom: 10px;
+}
+
+#loginForm {
+  padding-top: 20px;
+  width: 50%;
 }/*# sourceMappingURL=custom.css.map */

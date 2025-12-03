@@ -115,22 +115,11 @@ html{
     height: auto;
     vertical-align: middle;
   }
-  .collapse {
-    &:not(.show) {
-      display: none;
-    }
-  }
-  
-  .collapsing {
-    height: 0;
-    overflow: hidden;
-    @include transition($transition-collapse);
-  
-    &.collapse-horizontal {
-      width: 0;
-      height: auto;
-      @include transition($transition-collapse-width);
-    }
-  }
-
+.form-group{
+  padding-bottom: 10px;
+}
+#loginForm{
+  padding-top: 20px;
+  width: 50%;
+}
   
