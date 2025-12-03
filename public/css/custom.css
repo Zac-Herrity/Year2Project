@@ -133,4 +133,9 @@ html {
 #loginForm {
   padding-top: 20px;
   width: 50%;
+  border-bottom: 3px solid rgb(102, 96, 96);
+  border-right: 3px solid rgb(102, 96, 96);
+  border-top: 2px solid rgb(182, 171, 171);
+  border-left: 2px solid rgb(182, 171, 171);
+  margin-top: 20px;
 }/*# sourceMappingURL=custom.css.map */

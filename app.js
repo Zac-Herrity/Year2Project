@@ -76,6 +76,14 @@ app.get('/contact', (req, res) => {
   res.render('contact', {state, head});
   console.log('Contact');
 });
+
+//createAccount route
+app.get('/createAccount', (req, res) => {
+  state = {contact: true};
+  head = {title: "Create Account"};
+  res.render('createAccount', {state, head});
+  console.log('Create Account');
+});
 // #endregion
 
 //start the server

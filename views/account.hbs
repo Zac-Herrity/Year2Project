@@ -18,7 +18,9 @@
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
+  <div style="margin-bottom: 10px;">
   <button type="submit" class="btn-light btn">Login</button>
-  <a href="/createAccount" class="btn btn-light" role="button">Or Create Account!</a>
+  <a href="/createAccount" style="margin-left: 20px;" class="btn btn-light {{#if state.home}}active{{/if}}" role="button">Or Create Account!</a>
+  </div>
 </form>
 </div>
