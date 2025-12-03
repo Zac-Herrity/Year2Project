@@ -1,0 +1,127 @@
+body {
+  background-color: rgb(21, 19, 19);
+  color: white;
+}
+
+html {
+  background-color: rgb(21, 19, 19);
+}
+
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(21, 19, 19);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s, visibility 0.4s;
+  z-index: 9998;
+}
+
+.overlay-menu.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay-menu .nav-links {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-menu .nav-links a {
+  color: white;
+  font-size: 2em;
+  margin: 10px;
+  text-decoration: none;
+  z-index: 9999;
+}
+
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.menu-toggle {
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  padding: 10px 15px;
+  background: none;
+  cursor: pointer;
+  color: white;
+}
+
+.home-coin {
+  display: block;
+  margin: 20px auto;
+  height: auto;
+  margin-top: 100px;
+  width: 80%;
+  max-width: 150px;
+}
+
+.home-coin img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 601px) {
+  .home-coin {
+    max-width: 200px;
+  }
+}
+@media (min-width: 901px) {
+  .home-coin {
+    max-width: 250px;
+  }
+}
+.site-logo {
+  width: 150px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav-Bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 5px;
+  border-color: rgb(102, 96, 96);
+  border-bottom: 1px solid rgb(102, 96, 96);
+  background-color: rgb(21, 19, 19);
+  width: 100%;
+}
+
+.nav-text-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-tagline {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.nav-logo {
+  width: 300px;
+  height: auto;
+  vertical-align: middle;
+}/*# sourceMappingURL=custom.css.map */

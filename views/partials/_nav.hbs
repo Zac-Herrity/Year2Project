@@ -1,0 +1,25 @@
+{{!-- button to toggle nav --}}
+<div class="nav-Bar">
+    <a href="/">
+    <img class="site-logo" src="/images/SiteLogo.PNG" alt="logo of wallet whimsy">
+    </a>
+    <div class="nav-text-wrapper">
+    <h4 class="nav-tagline" style="color:silver;">A Web Design Project</h4>
+    <h4 class="nav-tagline" style="color: silver;">Founded by S00269936</h4>
+    </div>
+    <button class="menu-toggle">☰</button>
+</div>
+<div class="overlay-menu">
+    <button class="close-menu">✕</button>
+    <nav class="nav-links">
+        {{!-- navigation links --}}
+    <img class="nav-logo" src="/images/SiteLogo.PNG" alt="nav logo of wallet whimsy">
+    <a class="nav-link {{#if state.home}}active{{/if}}" href="/">Home</a>
+    <a class="nav-link {{#if state.aboutus}}active{{/if}}" href="/aboutus">About Us</a>
+    <a class="nav-link {{#if state.account}}active{{/if}}" href="/account">Account</a>
+    <a class="nav-link {{#if state.shop}}active{{/if}}" href="/shop">Shop</a>
+    <a class="nav-link {{#if state.contact}}active{{/if}}" href="/contact">Contact Us</a>
+    </nav>
+</div>
+<script src="/nav.js"></script>
+
