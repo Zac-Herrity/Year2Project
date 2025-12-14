@@ -1,5 +1,28 @@
+let cart;
+const savedCart = localStorage.getItem('cart');
+if (savedCart){
+    cart = JSON.parse(savedCart); //if true, parses the data to cart
+}
+else{
+    cart = {}; //returns empty array to avoid issues (only if false)
+}
 
 document.querySelectorAll('.shopCard').forEach(card =>{
     const productID = card.dataset.productID;
-    
+    const addButton = card.querySelector('.add-btn');
+    const removeButton = card.querySelector('.remove-btn');
+    const count = card.querySelector('.cart-count');
+
+    count.textContent = cart[productID] || 0; //sets cart to 0, or sets to amount added to cart
+
+    addButton.addEventListener('click', function(){
+        if (cart[productID]){
+            cart[productID] = cart[productID]+1; //adds +1 to total when clicked
+        }
+        else{
+            cart[productID] = 1; //if proudct is not in cart already. set it's value to 1
+        }
+        count.textContent = cart[productID];
+        saveCart();
+    });
 })
