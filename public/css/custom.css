@@ -143,4 +143,8 @@ html {
 .shopCard {
   background-color: #C0C0C0;
   border-radius: 10px;
+}
+
+.cardButton {
+  margin: 10px;
 }/*# sourceMappingURL=custom.css.map */
