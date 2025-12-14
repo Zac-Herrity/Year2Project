@@ -8,7 +8,7 @@ else{
 }
 
 document.querySelectorAll('.shopCard').forEach(card =>{
-    const productID = card.dataset.productID;
+    const productID = card.dataset.productId;
     const addButton = card.querySelector('.add-btn');
     const removeButton = card.querySelector('.remove-btn');
     const count = card.querySelector('.cart-count');
@@ -25,4 +25,21 @@ document.querySelectorAll('.shopCard').forEach(card =>{
         count.textContent = cart[productID];
         saveCart();
     });
+
+
+    removeButton.addEventListener('click', function(){
+        if (cart[productID] > 0){
+            cart[productID] = cart[productID] - 1; //removes 1 from counter
+        count.textContent = cart[productID];
+        saveCart();
+        }
+        else{
+            delete cart[productID]; //deletes counter, prevents it going into negative
+        }
+    });
 })
+
+function saveCart(){
+    localStorage.setItem('cart', JSON.stringify(cart));
+    //stringify transforms a js object (a proudct for example) to a string
+}
