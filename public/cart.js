@@ -6,6 +6,7 @@ if (savedCart){
 else{
     cart = {}; //returns empty array to avoid issues (only if false)
 }
+console.log('Loaded cart:', cart); //testing
 
 document.querySelectorAll('.shopCard').forEach(card =>{
     const productID = card.dataset.productId;
@@ -16,12 +17,15 @@ document.querySelectorAll('.shopCard').forEach(card =>{
     count.textContent = cart[productID] || 0; //sets cart to 0, or sets to amount added to cart
 
     addButton.addEventListener('click', function(){
+        console.log('adding product - ', productID);
+        console.log('before - ', cart);
         if (cart[productID]){
             cart[productID] = cart[productID]+1; //adds +1 to total when clicked
         }
         else{
             cart[productID] = 1; //if proudct is not in cart already. set it's value to 1
         }
+        console.log('after -', cart)
         count.textContent = cart[productID];
         saveCart();
     });
