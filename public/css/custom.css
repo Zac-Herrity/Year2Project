@@ -154,4 +154,9 @@ html {
   height: auto;
   background-color: goldenrod;
   margin-top: 20px;
+}
+
+#clearSelection {
+  background-color: #C0C0C0;
+  margin-top: 20px;
 }/*# sourceMappingURL=custom.css.map */

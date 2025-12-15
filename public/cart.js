@@ -47,3 +47,16 @@ function saveCart(){
     localStorage.setItem('cart', JSON.stringify(cart));
     //stringify transforms a js object (a proudct for example) to a string
 }
+
+//following is to clear local storage as it does not clear on refresh
+const clearButton = document.getElementById('clearSelection');
+
+clearButton.addEventListener('click', function() {
+    localStorage.removeItem('cart');
+    console.log("Cart Cleared");
+
+    //updates all span counters
+    document.querySelectorAll('.cart-count').forEach(span => {
+        span.textContent = 0; //sets span countes to 0's
+    });
+});
