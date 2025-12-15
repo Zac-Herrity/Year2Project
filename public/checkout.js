@@ -16,3 +16,14 @@ const prices = {
     oopbucks: 27.50,
     sqlcoin: 87.50
 }
+
+const checkoutDiv = document.getElementById('checkoutDiv');
+let total = 0;
+
+for(const productId in cart){
+    const quantity = cart[productId];
+    const price = prices[productId];
+    const tokenTotal = prices * quantity;
+
+    total += tokenTotal;
+}
