@@ -79,11 +79,27 @@ app.get('/contact', (req, res) => {
 
 //createAccount route
 app.get('/createAccount', (req, res) => {
-  state = {contact: true};
+  state = {createAccount: true};
   head = {title: "Create Account"};
   res.render('createAccount', {state, head});
   console.log('Create Account');
 });
+
+//loggedin route
+app.get('/loggedin', (req, res) => {
+  state = {loggedin: true};
+  head = {title: "You are logged in."};
+  res.render('loggedin', {state, head});
+  console.log('Logged In');
+})
+
+//checkout route
+app.get('/checkout', (req, res) => {
+  state = {checkout: true};
+  head = {title: "Checkout"};
+  res.render('checkout', {state, head});
+  console.log('Checkout');
+})
 // #endregion
 
 //start the server
