@@ -53,6 +53,7 @@ const clearButton = document.getElementById('clearSelection');
 
 clearButton.addEventListener('click', function() {
     localStorage.removeItem('cart');
+    cart = {}; //clears cart
     console.log("Cart Cleared");
 
     //updates all span counters
