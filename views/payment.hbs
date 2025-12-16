@@ -1,2 +1,24 @@
 {{!-- meta tags --}}
 <meta name="description" content="Give me your money, you can trust me with your card details.">
+<title>Payment</title>
+
+<div class="container mb-5">
+    <form>
+    <div class="form-group"></div>
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Name</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div style="margin-bottom: 10px;">
+  <button type="submit" class="btn-light btn">Login</button>
+  <a href="/createAccount" style="margin-left: 20px;" class="btn btn-light {{#if state.home}}active{{/if}}" role="button">Or Create Account!</a>
+  </div>
+</form>
+</div>
