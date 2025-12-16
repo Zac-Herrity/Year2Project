@@ -33,12 +33,12 @@ for(const productId in cart){
     itemDiv.innerHTML =
     `${productId} <br>
     Quantity: ${quantity} <br>
-    Price: ${price} <br>
+    Price: ${price} (per token)<br>
     Total: ${tokenTotal}`;
 
     checkoutDiv.appendChild(itemDiv);
 }
 
 const totals = document.createElement('div');
-totals.innerHTML = `<h5>Total: ${total}`;
+totals.innerHTML = `<h5>Total of your selection: ${total}`;
 checkoutDiv.appendChild(totals);
