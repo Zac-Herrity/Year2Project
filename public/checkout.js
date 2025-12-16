@@ -23,7 +23,22 @@ let total = 0;
 for(const productId in cart){
     const quantity = cart[productId];
     const price = prices[productId];
-    const tokenTotal = prices * quantity;
+    const tokenTotal = price * quantity;
 
     total += tokenTotal;
+
+    const itemDiv = document.createElement('div');
+    itemDiv.className = 'mb-3'; //sets margin for cleaner output
+
+    itemDiv.innerHTML =
+    `${productId} <br>
+    Quantity: ${quantity} <br>
+    Price: ${price} <br>
+    Total: ${tokenTotal}`;
+
+    checkoutDiv.appendChild(itemDiv);
 }
+
+const totals = document.createElement('div');
+totals.innerHTML = `<h5>Total: ${total}`;
+checkoutDiv.appendChild(totals);
