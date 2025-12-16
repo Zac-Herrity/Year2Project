@@ -100,6 +100,14 @@ app.get('/checkout', (req, res) => {
   res.render('checkout', {state, head});
   console.log('Checkout');
 })
+
+//payment route
+app.get('/payment', (req, res) => {
+  state = {payment: true};
+  head = {title: "Payment"};
+  res.render('payment', {state, head});
+  console.log('Payment');
+})
 // #endregion
 
 //start the server
