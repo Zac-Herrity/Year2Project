@@ -108,6 +108,14 @@ app.get('/payment', (req, res) => {
   res.render('payment', {state, head});
   console.log('Payment');
 })
+
+//success route
+app.get('/success', (req, res) => {
+  state = {success: true};
+  head = {title: "Success"};
+  res.render('success', {state, head});
+  console.log('Success');
+})
 // #endregion
 
 //start the server
