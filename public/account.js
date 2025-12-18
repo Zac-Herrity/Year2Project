@@ -61,5 +61,20 @@ function createAccount(){
         return;
     }
     const users = JSON.parse(localStorage.getItem('users')) || []; //same as before
+
+    for(let i =0; i<users.length; i++){
+        if(users[i].email === email){
+            alert('This account has already been created.')
+            return;
+        }
+    }
+    users.push({
+        email, name: username, password //creates new object with these params
+    });
+
+    localStorage.setItem('users', JSON.stringify(users));
+    localStorage.setItem('username', username);
+
+    window.location.href = '/loggedin';
 }
 //#endregion
