@@ -77,14 +77,6 @@ app.get('/contact', (req, res) => {
   console.log('Contact');
 });
 
-//createAccount route
-app.get('/createAccount', (req, res) => {
-  state = {createAccount: true};
-  head = {title: "Create Account"};
-  res.render('createAccount', {state, head});
-  console.log('Create Account');
-});
-
 //loggedin route
 app.get('/loggedin', (req, res) => {
   state = {loggedin: true};
