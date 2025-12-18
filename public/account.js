@@ -51,5 +51,15 @@ window.location.href = '/loggedin';
 //#endregion
 
 //#region Create Account
+function createAccount(){
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const username = document.getElementById('username').value.trim();
 
+    if(!email || !password || !username){
+        alert('Please ensure to fill iun all fields')
+        return;
+    }
+    const users = JSON.parse(localStorage.getItem('users')) || []; //same as before
+}
 //#endregion
