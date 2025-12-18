@@ -1,5 +1,5 @@
-document.getElementById('payment').addEventListener('submit', function(){
-
+document.getElementById('payment').addEventListener('submit', function(x){
+x.preventDefault();
     //variables
     const name = document.getElementById('cardName').value.trim();
     const number = document.getElementById('cardNumber').value.trim();
@@ -7,7 +7,7 @@ document.getElementById('payment').addEventListener('submit', function(){
     const cvv = document.getElementById('cvv').value.trim();
 
     //regex
-    const regexName = /^[a-zA-z]{3,12} [a-zA-z]{2,12}$/;
+    const regexName = /^[a-zA-Z]{3,12} [a-zA-Z]{2,12}$/;
     const regexNumber = /^\d{16}$/;
     const regexExp = /^(0[1-9]|1[0-2])\/\d{2}$/;
     const regexCVV = /^\d{3}$/;
@@ -30,4 +30,6 @@ document.getElementById('payment').addEventListener('submit', function(){
     }
 
     localStorage.setItem('cardName', name);
+    console.log('storing name');
+    window.location.href = '/success';
 })
