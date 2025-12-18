@@ -34,7 +34,8 @@ if(!foundUser){
     return;
 }
 
-localStorage.setItem('userLoggedIn', foundUser.name);
+localStorage.setItem('username', foundUser.name);
+window.location.href = '/loggedin';
 
 });
 //#endregion
