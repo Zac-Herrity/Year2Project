@@ -28,4 +28,6 @@ document.getElementById('payment').addEventListener('submit', function(){
         alert('Must be 3 digits');
         return;
     }
+
+    localStorage.setItem('cardName', name);
 })

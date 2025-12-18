@@ -1,0 +1,9 @@
+{{!-- meta tags --}}
+<meta name="description" content="Thank you for your payment.">
+<title>Wallet Whimsy - Success</title>
+<h2 id="thankYou"></h2>
+<script>
+    const name = localStorage.getItem('cardName');
+
+    document.getElementById('thankYou').textContent = `Thanks ${name}, your payment has been successful!`;
+</script>
