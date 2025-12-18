@@ -1,3 +1,13 @@
 {{!-- meta tags --}}
 <meta name="description" content="Thank you for logging in">
 <title>Wallet Whimsy - Logged In</title>
+
+<div class="container" id="loggedIn">
+    <h2 id="welcome"></h2>
+</div>
+<script>
+    const name = localStorage.getItem('username');
+    if(name){
+        document.getElementById('welcome').textContent = `Welcome back ${name}`;
+    }
+</script>

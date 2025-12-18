@@ -16,6 +16,7 @@ document.getElementById('loginForm').addEventListener('submit', function(x){
 
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
+    const username = document.getElementById('username').value.trim();
     const users = JSON.parse(localStorage.getItem('users')) || []; //parses local storage OR returns empty array
 
     let foundUser = null;
