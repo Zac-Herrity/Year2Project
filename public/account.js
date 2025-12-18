@@ -10,10 +10,21 @@ if(!localStorage.getItem('users')){
     localStorage.setItem('users', JSON.stringify(users));
 }
 
-// #region Login
-document.getElementById('loginForm').addEventListener('submit', function(x){
+
+const form = document.getElementById('loginForm');
+form.addEventListener('submit', function(x){
     x.preventDefault();
 
+    const formAction = document.activeElement.dataset.action;
+    if(formAction === 'login'){
+        login();
+    }
+    else if(formAction === 'create'){
+        createAccount();
+    }
+});
+// #region Login
+function login(){
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value.trim();
     const username = document.getElementById('username').value.trim();
@@ -36,6 +47,9 @@ if(!foundUser){
 
 localStorage.setItem('username', foundUser.name);
 window.location.href = '/loggedin';
+}
+//#endregion
 
-});
+//#region Create Account
+
 //#endregion
