@@ -11,18 +11,25 @@ if(!localStorage.getItem('users')){
 }
 
 
+let action;
+document.getElementById('loginBtn').addEventListener('click', function(){
+    action = 'login';
+})
+document.getElementById('createBtn').addEventListener('click', function(){
+    action = 'create';
+})
 const form = document.getElementById('loginForm');
 form.addEventListener('submit', function(x){
     x.preventDefault();
 
-    const formAction = document.activeElement.dataset.action;
-    if(formAction === 'login'){
+    if(action === 'login'){
         login();
     }
-    else if(formAction === 'create'){
+    else if(action === 'create'){
         createAccount();
     }
-});
+})
+
 // #region Login
 function login(){
     const email = document.getElementById('email').value.trim();
